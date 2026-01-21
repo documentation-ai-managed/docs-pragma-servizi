@@ -1,0 +1,137 @@
+---
+title: Changelog
+description: Stay updated with the latest releases, features, and improvements in Pragma Servizi.
+---
+
+## Recent Releases
+
+Pragma Servizi releases updates regularly to enhance your documentation experience. Check the highlights below and upgrade to access the latest features and fixes.
+
+<Update label="2024-10-15" description="v2.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams, allowing multiple users to edit docs simultaneously.
+- Introduced custom brand color picker in workspace settings (`#3B82F6` as default).
+
+## Improvements
+
+- Enhanced search with fuzzy matching and syntax highlighting for code blocks.
+- Optimized dashboard load times by `>30%` for large documentation spaces.
+
+## Bug Fixes
+
+- Fixed rendering issues with nested JSX components in MDX pages.
+- Resolved authentication token refresh errors during long sessions.
+
+</Update>
+
+<Update label="2024-09-20" description="v2.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched API endpoints for programmatic doc management at `https://api.example.com/v2/docs`.
+- Added version history and rollback for individual pages.
+
+## Breaking Changes
+
+- Updated authentication to require `{API_KEY}` in headers instead of query params.
+- Migrated config format from JSON to YAML for better readability.
+
+## Bug Fixes
+
+- Patched security vulnerability in webhook handling (CVE-2024-XXXX).
+- Fixed mobile responsiveness for tabbed code examples.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.5.0" tags={["bugfix", "improvement"]}>
+
+## Improvements
+
+- Streamlined onboarding with interactive quickstart wizard.
+- Added export to PDF and Markdown for entire doc spaces.
+
+## Bug Fixes
+
+- Corrected line numbering in `<CodeGroup>` components.
+- Stabilized Mermaid diagram rendering across browsers.
+
+</Update>
+
+## Upgrade Guide
+
+<Callout kind="info">
+Review your current setup before upgrading. Backup your workspace at `https://dashboard.example.com` to avoid data loss.
+</Callout>
+
+Follow these steps to upgrade Pragma Servizi smoothly.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+    Verify your integrations with the [release notes](https://docs.example.com/changelog#recent-releases).
+  </Step>
+  <Step title="Update Package" icon="download">
+    Install the latest version using your package manager.
+
+    <CodeGroup tabs="npm,yarn,pnpm">
+      ````bash
+      npm install pragma-servizi@latest
+      ````
+
+      ````bash
+      yarn add pragma-servizi@latest
+      ````
+
+      ````bash
+      pnpm add pragma-servizi@latest
+      ````
+    </CodeGroup>
+  </Step>
+  <Step title="Restart Services" icon="refresh-cw">
+    Run `pragma-servizi restart` and monitor logs for errors.
+  </Step>
+  <Step title="Verify" icon="zap">
+    Test key features like real-time editing at `https://dashboard.example.com/workspace`.
+  </Step>
+</Steps>
+
+## Upcoming Changes
+
+Preview what's coming in v2.2.0. These enhancements focus on AI-assisted documentation and advanced analytics.
+
+<Columns cols={2}>
+  <Card title="AI Features" icon="sparkles" href="/docs/ai-features">
+    Auto-generate outlines and suggest code snippets.
+  </Card>
+  <Card title="Analytics Dashboard" icon="bar-chart-3" href="/docs/analytics">
+    Track doc views, edits, and user engagement metrics.
+  </Card>
+  <Card title="Advanced Permissions" icon="shield" href="/docs/permissions">
+    Granular role-based access for enterprise teams.
+  </Card>
+</Columns>
+
+<Expandable title="Migration Notes for Breaking Changes" default-open="false">
+  For v2.0.0 users, update your API calls:
+
+  <ParamField header="X-API-Key" param-type="string" required="true">
+    Replace `?api_key={YOUR_API_KEY}` with header format.
+  </ParamField>
+
+  Example migration:
+
+  ````javascript
+  // Old
+  fetch('https://api.example.com/docs?api_key=YOUR_API_KEY');
+
+  // New
+  fetch('https://api.example.com/docs', {
+    headers: { 'X-API-Key': 'YOUR_API_KEY' }
+  });
+  ````
+</Expandable>
+
+<Callout kind="tip">
+Subscribe to updates via webhook at `https://your-webhook-url.com/pragma-updates` or check back here regularly.
+</Callout>

@@ -1,0 +1,100 @@
+---
+title: Introduction to Pragma Servizi
+description: Discover Pragma Servizi, a comprehensive platform for organizing and managing all your project documentation in one centralized space.
+---
+
+## Overview
+
+Pragma Servizi provides a centralized hub where you organize, manage, and collaborate on all your project documentation. You create structured spaces for technical docs, API references, user guides, and more, ensuring your team stays aligned without scattered files or version conflicts. Access everything from a clean dashboard at `https://dashboard.example.com`.
+
+This platform scales with your projects, from small teams to enterprise workflows, integrating seamlessly with your tools.
+
+## Key Features
+
+Pragma Servizi stands out with powerful features designed for modern documentation needs.
+
+<Columns cols={3}>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes with full Git integration. You commit, branch, and merge docs like code.
+  </Card>
+  <Card title="Collaborative Editing" icon="users" href="#collaboration">
+    Real-time editing for teams. Assign roles and review docs with inline comments.
+  </Card>
+  <Card title="Search & AI Assist" icon="search" href="#search">
+    Instant full-text search plus AI-powered summaries and auto-generated outlines.
+  </Card>
+</Columns>
+
+## Benefits for Teams and Projects
+
+You gain efficiency across your workflows. Teams reduce documentation silos, speeding up onboarding by `50%`. Projects maintain living docs that evolve with code changes.
+
+<Tabs>
+  <Tab title="For Teams" icon="users">
+    Centralize knowledge to boost productivity. You share secure links and set permissions per space.
+  </Tab>
+  <Tab title="For Projects" icon="package">
+    Embed docs in repositories or CI/CD pipelines. Auto-publish updates from Markdown or MDX files.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+  Start with a free tier to test collaboration features—no credit card required.
+</Callout>
+
+## Quick Navigation Tour
+
+Follow these steps to explore the interface.
+
+<Steps>
+  <Step title="Dashboard" icon="layout">
+    Land here after login. View recent spaces and search globally.
+  </Step>
+  <Step title="Create Space" icon="plus">
+    Click the `+` button. Choose templates for APIs, guides, or changelogs.
+  </Step>
+  <Step title="Edit Documents" icon="edit-3">
+    Open any `.mdx` file. Use the visual editor or switch to code view.
+  </Step>
+  <Step title="Publish & Share" icon="share-2">
+    Hit publish. Generate custom domains or embed previews.
+  </Step>
+</Steps>
+
+## Quick Links
+
+Dive deeper with these resources.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Set up your first space in under 5 minutes.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys and OAuth.
+  </Card>
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Customize themes and integrations.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Track platform updates.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Navigation Tips" default-open="false">
+
+Use keyboard shortcuts like `<kbd>Ctrl</kbd>+<kbd>K</kbd>` for instant search. Pin frequent spaces to your sidebar for one-click access.
+
+</Expandable>
+
+<CodeGroup tabs="CLI,API">
+  ```bash
+  pragma spaces create my-project --template=api-docs
+  ```
+  ```javascript
+  const response = await fetch('https://api.example.com/v1/spaces', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer YOUR_API_KEY' },
+    body: JSON.stringify({ name: 'my-project', template: 'api-docs' })
+  });
+  ```
+</CodeGroup>
